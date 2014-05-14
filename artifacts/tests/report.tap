@@ -26,7 +26,31 @@ ok 24 - Icecave\Archer\Console\Command\AbstractPHPUnitCommandTest::testConstruct
 ok 25 - Icecave\Archer\Console\Command\AbstractPHPUnitCommandTest::testGetHelp
 ok 26 - Icecave\Archer\Console\Command\AbstractPHPUnitCommandTest::testGenerateArgumentsFiltering
 ok 27 - Icecave\Archer\Console\Command\CoverageCommandTest::testConstructor
-ok 28 - Icecave\Archer\Console\Command\CoverageCommandTest::testConstructorDefaults
+ok 28 - # RISKY This test executed code that is not listed as code to be covered or used:
+- /home/travis/build/IcecaveStudios/archer/src/FileSystem/FileSystem.php:14
+- /home/travis/build/IcecaveStudios/archer/src/FileSystem/FileSystem.php:15
+- /home/travis/build/IcecaveStudios/archer/src/Process/PHPUnitExecutableFinder.php:17
+- /home/travis/build/IcecaveStudios/archer/src/Process/PHPUnitExecutableFinder.php:18
+- /home/travis/build/IcecaveStudios/archer/src/Process/PHPUnitExecutableFinder.php:20
+- /home/travis/build/IcecaveStudios/archer/src/Process/PHPUnitExecutableFinder.php:21
+- /home/travis/build/IcecaveStudios/archer/src/Process/PHPUnitExecutableFinder.php:24
+- /home/travis/build/IcecaveStudios/archer/src/Process/PHPUnitExecutableFinder.php:25
+- /home/travis/build/IcecaveStudios/archer/src/Process/PHPUnitExecutableFinder.php:26
+- /home/travis/build/IcecaveStudios/archer/src/Configuration/PHPConfigurationReader.php:14
+- /home/travis/build/IcecaveStudios/archer/src/Configuration/PHPConfigurationReader.php:15
+- /home/travis/build/IcecaveStudios/archer/src/Configuration/PHPConfigurationReader.php:18
+- /home/travis/build/IcecaveStudios/archer/src/Configuration/PHPConfigurationReader.php:19
+- /home/travis/build/IcecaveStudios/archer/src/Configuration/PHPConfigurationReader.php:20
+- /home/travis/build/IcecaveStudios/archer/src/Support/Liftoff/Launcher.php:23
+- /home/travis/build/IcecaveStudios/archer/src/Support/Liftoff/Launcher.php:24
+- /home/travis/build/IcecaveStudios/archer/src/Configuration/ConfigurationFileFinder.php:13
+- /home/travis/build/IcecaveStudios/archer/src/Configuration/ConfigurationFileFinder.php:14
+- /home/travis/build/IcecaveStudios/archer/src/Configuration/ConfigurationFileFinder.php:17
+- /home/travis/build/IcecaveStudios/archer/src/Configuration/ConfigurationFileFinder.php:18
+- /home/travis/build/IcecaveStudios/archer/src/Support/Isolator.php:14
+- /home/travis/build/IcecaveStudios/archer/src/Support/Isolator.php:16
+- /home/travis/build/IcecaveStudios/archer/src/Support/Isolator.php:17
+
 ok 29 - Icecave\Archer\Console\Command\CoverageCommandTest::testConfigure
 ok 30 - Icecave\Archer\Console\Command\CoverageCommandTest::testExecute
 ok 31 - Icecave\Archer\Console\Command\CoverageCommandTest::testExecuteWithOpen
