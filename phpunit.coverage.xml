@@ -1,6 +1,5 @@
 <phpunit
     bootstrap="test/bootstrap.php"
-    strict="true"
     convertErrorsToExceptions="true"
     convertNoticesToExceptions="true"
     convertWarningsToExceptions="true"
@@ -10,6 +9,9 @@
     timeoutForSmallTests="60"
     timeoutForMediumTests="120"
     timeoutForLargeTests="300"
+    beStrictAboutTestsThatDoNotTestAnything="true"
+    checkForUnintentionallyCoveredCode="false"
+    beStrictAboutOutputDuringTests="true"
 >
     <testsuites>
         <testsuite>
