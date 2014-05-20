@@ -49,6 +49,10 @@
         <whitelist>
             <directory>src</directory>
             <directory>src-internal</directory>
+            <exclude>
+                <directory suffix="Interface.php">src</directory>
+                <directory suffix="Interface.php">src-internal</directory>
+            </exclude>
         </whitelist>
     </filter>
 
