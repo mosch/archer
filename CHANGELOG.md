@@ -1,5 +1,10 @@
 # Archer Changelog
 
+### 1.1.5 (2014-05-20)
+
+* **[FIXED]** Files with no executable code (eg, interfaces) no longer skew the Coveralls coverage reports
+* **[FIXED]** PHPUnit 4.0 no longer complains about "risky" coverage
+
 ### 1.1.4 (2014-02-17)
 
 * **[FIXED]** The `travis:build` command no longer publishes artifacts when building a PR from a branch on the main repository
