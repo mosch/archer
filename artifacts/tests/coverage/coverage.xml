@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1400581801">
-  <project timestamp="1400581801">
+<coverage generated="1400590059">
+  <project timestamp="1400590059">
     <package name="Icecave\Archer\Configuration">
       <file name="/home/travis/build/IcecaveStudios/archer/src/Configuration/ComposerConfigurationReader.php">
         <class name="ComposerConfigurationReader" namespace="Icecave\Archer\Configuration">
@@ -1394,10 +1394,6 @@
         <metrics loc="82" ncloc="46" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
       </file>
     </package>
-    <file name="/home/travis/build/IcecaveStudios/archer/src/Support/Composer/Package/LinkConstraint/LinkConstraintInterface.php">
-      <line num="11" type="stmt" count="0"/>
-      <metrics loc="26" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="1" coveredelements="0"/>
-    </file>
     <package name="Icecave\Archer\Support\Liftoff\Exception">
       <file name="/home/travis/build/IcecaveStudios/archer/src/Support/Liftoff/Exception/LaunchException.php">
         <class name="LaunchException" namespace="Icecave\Archer\Support\Liftoff\Exception">
@@ -1628,6 +1624,6 @@
         <metrics loc="291" ncloc="198" classes="1" methods="14" coveredmethods="13" conditionals="0" coveredconditionals="0" statements="95" coveredstatements="94" elements="109" coveredelements="107"/>
       </file>
     </package>
-    <metrics files="33" loc="3624" ncloc="2812" classes="32" methods="180" coveredmethods="175" conditionals="0" coveredconditionals="0" statements="1216" coveredstatements="1191" elements="1396" coveredelements="1366"/>
+    <metrics files="32" loc="3598" ncloc="2800" classes="32" methods="180" coveredmethods="175" conditionals="0" coveredconditionals="0" statements="1215" coveredstatements="1191" elements="1395" coveredelements="1366"/>
   </project>
 </coverage>

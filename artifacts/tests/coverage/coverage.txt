@@ -1,12 +1,12 @@
 
 
 Code Coverage Report:        
-  2014-05-20 10:30:01        
+  2014-05-20 12:47:39        
                              
  Summary:                    
   Classes: 87.50% (28/32)    
   Methods: 97.22% (175/180)  
-  Lines:   97.94% (1191/1216)
+  Lines:   98.02% (1191/1215)
 
 \Icecave\Archer\Configuration::ComposerConfigurationReader
   Methods: 100.00% ( 3/ 3)   Lines: 100.00% ( 12/ 12)
