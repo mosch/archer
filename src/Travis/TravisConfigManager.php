@@ -11,21 +11,6 @@ use Icecave\Archer\Support\Isolator;
 class TravisConfigManager
 {
     /**
-     * Stable PHP versions supported by Travis.
-     */
-    public static $STABLE_VERSIONS = array('5.3', '5.4', '5.5');
-
-    /**
-     * Unstable PHP versions supported by Travis.
-     */
-    public static $UNSTABLE_VERSIONS = array('5.6');
-
-    /**
-     * Alternate PHP versions supported by Travis.
-     */
-    public static $ALTERNATE_VERSIONS = array('hhvm');
-
-    /**
      * @param FileSystem|null                  $fileSystem
      * @param ConfigurationFileFinder|null     $fileFinder
      * @param ComposerConfigurationReader|null $composerConfigReader
@@ -275,19 +260,19 @@ class TravisConfigManager
     {
         list($phpVersions, $phpPublishVersion) = $this->numericPhpVersions($packageRoot);
 
-        return array(array_merge($phpVersions, static::$ALTERNATE_VERSIONS), $phpPublishVersion);
+        return array(array_merge($phpVersions, static::$alternateVersions), $phpPublishVersion);
     }
 
     protected function numericPhpVersions($packageRoot)
     {
-        $phpVersions = array_merge(static::$STABLE_VERSIONS, static::$UNSTABLE_VERSIONS);
+        $phpVersions = array_merge(static::$stableVersions, static::$unstableVersions);
 
         $config = $this->composerConfigReader->read($packageRoot);
 
         // If there is no constraint specified in the composer
         // configuration then use all available versions.
         if (!isset($config->require->php)) {
-            return array($phpVersions, static::$STABLE_VERSIONS[count(static::$STABLE_VERSIONS) - 1]);
+            return array($phpVersions, static::$stableVersions[count(static::$stableVersions) - 1]);
         }
 
         // Parse the constraint ...
@@ -301,7 +286,7 @@ class TravisConfigManager
             if ($constraint->matches($provider)) {
                 $filteredVersions[] = $version;
 
-                if (null === $phpPublishVersion || in_array($version, static::$STABLE_VERSIONS, true)) {
+                if (null === $phpPublishVersion || in_array($version, static::$stableVersions, true)) {
                     $phpPublishVersion = $version;
                 }
             }
@@ -309,7 +294,7 @@ class TravisConfigManager
 
         // No matches were found, use the latest stable version that travis supports ...
         if (0 === count($filteredVersions)) {
-            $latestStable = static::$STABLE_VERSIONS[count(static::$STABLE_VERSIONS) - 1];
+            $latestStable = static::$stableVersions[count(static::$stableVersions) - 1];
 
             return array(array($latestStable), $latestStable);
         }
@@ -319,7 +304,7 @@ class TravisConfigManager
 
     protected function allowFailureVersions(array $phpVersions)
     {
-        $unstableVersions = array_merge(static::$UNSTABLE_VERSIONS, static::$ALTERNATE_VERSIONS);
+        $unstableVersions = array_merge(static::$unstableVersions, static::$alternateVersions);
 
         $allowFailureVersions = array();
         foreach ($phpVersions as $version) {
@@ -330,6 +315,21 @@ class TravisConfigManager
 
         return $allowFailureVersions;
     }
+
+    /**
+     * Stable PHP versions supported by Travis.
+     */
+    private static $stableVersions = array('5.3', '5.4', '5.5');
+
+    /**
+     * Unstable PHP versions supported by Travis.
+     */
+    private static $unstableVersions = array('5.6');
+
+    /**
+     * Alternate PHP versions supported by Travis.
+     */
+    private static $alternateVersions = array('hhvm');
 
     private $fileSystem;
     private $fileFinder;
