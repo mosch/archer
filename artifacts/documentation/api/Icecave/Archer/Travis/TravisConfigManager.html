@@ -26,6 +26,32 @@
 
     
     
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_STABLE_VERSIONS">
+                    static                                        
+                </td>
+                <td>$STABLE_VERSIONS</td>
+                <td class="last">Stable PHP versions supported by Travis.</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_UNSTABLE_VERSIONS">
+                    static                                        
+                </td>
+                <td>$UNSTABLE_VERSIONS</td>
+                <td class="last">Unstable PHP versions supported by Travis.</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_ALTERNATE_VERSIONS">
+                    static                                        
+                </td>
+                <td>$ALTERNATE_VERSIONS</td>
+                <td class="last">Alternate PHP versions supported by Travis.</td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -135,7 +161,7 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 19</div>
+        <div class="location">at line 34</div>
         <code>            public            
     <strong>__construct</strong>(<a href="../../../Icecave/Archer/FileSystem/FileSystem.html"><abbr title="Icecave\Archer\FileSystem\FileSystem">FileSystem</abbr></a> $fileSystem = null, <a href="../../../Icecave/Archer/Configuration/ConfigurationFileFinder.html"><abbr title="Icecave\Archer\Configuration\ConfigurationFileFinder">ConfigurationFileFinder</abbr></a> $fileFinder = null, <a href="../../../Icecave/Archer/Configuration/ComposerConfigurationReader.html"><abbr title="Icecave\Archer\Configuration\ComposerConfigurationReader">ComposerConfigurationReader</abbr></a> $composerConfigReader = null, <a href="../../../Icecave/Archer/Support/Isolator.html"><abbr title="Icecave\Archer\Support\Isolator">Isolator</abbr></a> $isolator = null)</code>
     </h3>
@@ -181,7 +207,7 @@
     </div>
 
                 <h3 id="method_fileSystem">
-        <div class="location">at line 47</div>
+        <div class="location">at line 60</div>
         <code>            public            <a href="../../../Icecave/Archer/FileSystem/FileSystem.html"><abbr title="Icecave\Archer\FileSystem\FileSystem">FileSystem</abbr></a>
     <strong>fileSystem</strong>()</code>
     </h3>
@@ -208,7 +234,7 @@
     </div>
 
                 <h3 id="method_fileFinder">
-        <div class="location">at line 55</div>
+        <div class="location">at line 68</div>
         <code>            public            <a href="../../../Icecave/Archer/Configuration/ConfigurationFileFinder.html"><abbr title="Icecave\Archer\Configuration\ConfigurationFileFinder">ConfigurationFileFinder</abbr></a>
     <strong>fileFinder</strong>()</code>
     </h3>
@@ -235,7 +261,7 @@
     </div>
 
                 <h3 id="method_composerConfigReader">
-        <div class="location">at line 63</div>
+        <div class="location">at line 76</div>
         <code>            public            <a href="../../../Icecave/Archer/Configuration/ComposerConfigurationReader.html"><abbr title="Icecave\Archer\Configuration\ComposerConfigurationReader">ComposerConfigurationReader</abbr></a>
     <strong>composerConfigReader</strong>()</code>
     </h3>
@@ -262,7 +288,7 @@
     </div>
 
                 <h3 id="method_publicKeyCache">
-        <div class="location">at line 73</div>
+        <div class="location">at line 86</div>
         <code>            public            string|null
     <strong>publicKeyCache</strong>(string $packageRoot)</code>
     </h3>
@@ -300,7 +326,7 @@
     </div>
 
                 <h3 id="method_setPublicKeyCache">
-        <div class="location">at line 89</div>
+        <div class="location">at line 102</div>
         <code>            public            boolean
     <strong>setPublicKeyCache</strong>(string $packageRoot, string|null $publicKey)</code>
     </h3>
@@ -344,7 +370,7 @@
     </div>
 
                 <h3 id="method_secureEnvironmentCache">
-        <div class="location">at line 114</div>
+        <div class="location">at line 127</div>
         <code>            public            string|null
     <strong>secureEnvironmentCache</strong>(string $packageRoot)</code>
     </h3>
@@ -382,7 +408,7 @@
     </div>
 
                 <h3 id="method_setSecureEnvironmentCache">
-        <div class="location">at line 130</div>
+        <div class="location">at line 143</div>
         <code>            public            boolean
     <strong>setSecureEnvironmentCache</strong>(string $packageRoot, string|null $secureEnvironment)</code>
     </h3>
@@ -426,7 +452,7 @@
     </div>
 
                 <h3 id="method_updateConfig">
-        <div class="location">at line 156</div>
+        <div class="location">at line 169</div>
         <code>            public            boolean
     <strong>updateConfig</strong>(string $archerPackageRoot, string $packageRoot)</code>
     </h3>

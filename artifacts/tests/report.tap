@@ -214,7 +214,8 @@ ok 212 - Icecave\Archer\Travis\TravisConfigManagerTest::testUpdateConfigWithOAut
 ok 213 - Icecave\Archer\Travis\TravisConfigManagerTest::testUpdateConfigPhpVersionConstraint
 ok 214 - Icecave\Archer\Travis\TravisConfigManagerTest::testUpdateConfigPhpVersionConstraintWithPatchVersion
 ok 215 - Icecave\Archer\Travis\TravisConfigManagerTest::testUpdateConfigPhpVersionConstraintNoMatches
-ok 216 - Icecave\Archer\Travis\TravisConfigManagerTest::testUpdateConfigPhpPublishVersion with data set #0 ('>=5.3', '5.5')
-ok 217 - Icecave\Archer\Travis\TravisConfigManagerTest::testUpdateConfigPhpPublishVersion with data set #1 ('<=5.5', '5.4')
-ok 218 - Icecave\Archer\Travis\TravisConfigManagerTest::testUpdateConfigPhpPublishVersion with data set #2 ('>=6.0', '5.5')
-1..218
+ok 216 - Icecave\Archer\Travis\TravisConfigManagerTest::testUpdateConfigPhpVersionNoConstraint
+ok 217 - Icecave\Archer\Travis\TravisConfigManagerTest::testUpdateConfigPhpPublishVersion with data set #0 ('>=5.3', '5.5')
+ok 218 - Icecave\Archer\Travis\TravisConfigManagerTest::testUpdateConfigPhpPublishVersion with data set #1 ('<=5.5', '5.4')
+ok 219 - Icecave\Archer\Travis\TravisConfigManagerTest::testUpdateConfigPhpPublishVersion with data set #2 ('>=6.0', '5.5')
+1..219
