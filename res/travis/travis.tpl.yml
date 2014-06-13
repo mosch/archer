@@ -2,6 +2,7 @@ language: php
 
 php: {php-versions}
 
+{matrix}
 env:
   global:
     - ARCHER_PUBLISH_VERSION={php-publish-version}
