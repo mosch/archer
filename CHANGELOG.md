@@ -1,5 +1,10 @@
 # Archer Changelog
 
+### 1.2.0 (2014-06-23)
+
+* **[FIXED]** Files named `xxxInterface.php` are explictly excluded from coverage reports
+* **[NEW]** Added support for PHP 5.6 and HHVM to Travis CI configuration generator
+
 ### 1.1.5 (2014-05-20)
 
 * **[FIXED]** Files with no executable code (eg, interfaces) no longer skew the Coveralls coverage reports
