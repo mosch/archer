@@ -1,24 +1,19 @@
-#
-# This is the default Travis CI configuration.
-#
-# It uses a GitHub OAuth token when fetching composer dependencies
-# to avoid IP-based API throttling.
-#
-# It also allows publication of artifacts via an additional build.
-#
 language: php
 
-php: ["5.3", "5.4", "5.5"]
+php: ["5.3", "5.4", "5.5", "5.6", "hhvm"]
+
+matrix:
+    allow_failures: [{"php": "5.6"}, {"php": "hhvm"}]
+    fast_finish: true
+
+    # Include another build in the matrix for dogfooding Archer!
+    include:
+        - php: 5.5
+          env:
+            - secure: "PBoNnK73ID8FUCR6nreUdqnBIyH1h9NjB9eVVSFllc1+WRAGAFBNMVNo4f/4x9Da84SbfBwpw7Z7l7Rtgo69kPcSzgnhtE7WeqHZ5lzdxW+0dgBnFA48KVz5BZ7clvMSeqDI06v96hbTBWcs6KNvemg5ZRegG6U7R4AmSWUmQlI="
 
 install:
-  - ./.travis.install
+    - ./.travis.install
 
 script:
-  - ./.travis.build
-
-# Include another build in the matrix for dogfooding Archer!
-matrix:
-  include:
-    - php: 5.5
-      env:
-        - secure: "PBoNnK73ID8FUCR6nreUdqnBIyH1h9NjB9eVVSFllc1+WRAGAFBNMVNo4f/4x9Da84SbfBwpw7Z7l7Rtgo69kPcSzgnhtE7WeqHZ5lzdxW+0dgBnFA48KVz5BZ7clvMSeqDI06v96hbTBWcs6KNvemg5ZRegG6U7R4AmSWUmQlI="
+    - ./.travis.build

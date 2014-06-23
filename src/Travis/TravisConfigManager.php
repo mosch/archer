@@ -25,11 +25,9 @@ class TravisConfigManager
         if (null === $fileSystem) {
             $fileSystem = new FileSystem;
         }
-
         if (null === $fileFinder) {
             $fileFinder = new ConfigurationFileFinder;
         }
-
         if (null === $composerConfigReader) {
             $composerConfigReader = new ComposerConfigurationReader;
         }
@@ -168,8 +166,20 @@ class TravisConfigManager
             $tokenEnvironment = '';
         }
 
-        $phpVersions = $this->phpVersions($packageRoot);
-        $phpPublishVersion = end($phpVersions);
+        list($phpVersions, $phpPublishVersion) = $this->phpVersions($packageRoot);
+
+        $allowFailureVersions = $this->allowFailureVersions($phpVersions);
+        if (count($allowFailureVersions) > 0) {
+            $allowFailureVersions = '[{"php": "' . implode('"}, {"php": "', $allowFailureVersions) . '"}]';
+
+            $template = $this->fileSystem()->read(
+                $this->findTemplatePath($archerPackageRoot, $packageRoot, $secureEnvironment !== null, 'travis-matrix')
+            );
+            $matrix = str_replace(array('{allow-failure-versions}'), array($allowFailureVersions), $template);
+        } else {
+            $matrix = '';
+        }
+
         $phpVersions = '["' . implode('", "', $phpVersions) . '"]';
 
         // Re-build travis.yml.
@@ -180,8 +190,8 @@ class TravisConfigManager
         $this->fileSystem()->write(
             sprintf('%s/.travis.yml', $packageRoot),
             str_replace(
-                array('{token-env}', '{php-versions}', '{php-publish-version}'),
-                array($tokenEnvironment, $phpVersions, $phpPublishVersion),
+                array('{token-env}', '{php-versions}', '{matrix}', '{php-publish-version}'),
+                array($tokenEnvironment, $phpVersions, $matrix, $phpPublishVersion),
                 $template
             )
         );
@@ -197,11 +207,11 @@ class TravisConfigManager
      *
      * @return string
      */
-    protected function findTemplatePath($archerPackageRoot, $packageRoot, $hasSecureEnvironment)
+    protected function findTemplatePath($archerPackageRoot, $packageRoot, $hasSecureEnvironment, $templateName = null)
     {
         return $this->fileFinder()->find(
-            $this->candidateTemplatePaths($packageRoot, $hasSecureEnvironment),
-            $this->defaultTemplatePath($archerPackageRoot, $hasSecureEnvironment)
+            $this->candidateTemplatePaths($packageRoot, $hasSecureEnvironment, $templateName),
+            $this->defaultTemplatePath($archerPackageRoot, $hasSecureEnvironment, $templateName)
         );
     }
 
@@ -211,13 +221,13 @@ class TravisConfigManager
      *
      * @return array<string>
      */
-    protected function candidateTemplatePaths($packageRoot, $hasSecureEnvironment)
+    protected function candidateTemplatePaths($packageRoot, $hasSecureEnvironment, $templateName = null)
     {
         return array(
             sprintf(
                 '%s/test/%s',
                 $packageRoot,
-                $this->templateFilename($hasSecureEnvironment)
+                $this->templateFilename($hasSecureEnvironment, $templateName)
             )
         );
     }
@@ -228,60 +238,98 @@ class TravisConfigManager
      *
      * @return string
      */
-    protected function defaultTemplatePath($archerPackageRoot, $hasSecureEnvironment)
+    protected function defaultTemplatePath($archerPackageRoot, $hasSecureEnvironment, $templateName = null)
     {
         return sprintf(
             '%s/res/travis/%s',
             $archerPackageRoot,
-            $this->templateFilename($hasSecureEnvironment)
+            $this->templateFilename($hasSecureEnvironment, $templateName)
         );
     }
 
-    /**
-     * @param string $archerPackageRoot
-     *
-     * @return string
-     */
-    protected function templateFilename($hasSecureEnvironment)
+    protected function templateFilename($hasSecureEnvironment, $templateName = null)
     {
-        return 'travis.tpl.yml';
+        if (null === $templateName) {
+            $templateName = 'travis';
+        }
+
+        return $templateName . '.tpl.yml';
     }
 
     protected function phpVersions($packageRoot)
     {
-        $availableVersions = array(
-            '5.3',
-            '5.4',
-            '5.5',
-        );
+        list($phpVersions, $phpPublishVersion) = $this->numericPhpVersions($packageRoot);
+
+        return array(array_merge($phpVersions, static::$alternateVersions), $phpPublishVersion);
+    }
+
+    protected function numericPhpVersions($packageRoot)
+    {
+        $phpVersions = array_merge(static::$stableVersions, static::$unstableVersions);
 
         $config = $this->composerConfigReader->read($packageRoot);
 
         // If there is no constraint specified in the composer
         // configuration then use all available versions.
         if (!isset($config->require->php)) {
-            return $availableVersions;
+            return array($phpVersions, static::$stableVersions[count(static::$stableVersions) - 1]);
         }
 
         // Parse the constraint ...
         $constraint = $this->versionParser->parseConstraints($config->require->php);
         $filteredVersions = array();
+        $phpPublishVersion = null;
 
         // Check each available version against the constraint ...
-        foreach ($availableVersions as $version) {
+        foreach ($phpVersions as $version) {
             $provider = new VersionConstraint('=', $this->versionParser->normalize($version . '.' . PHP_INT_MAX));
             if ($constraint->matches($provider)) {
                 $filteredVersions[] = $version;
+
+                if (null === $phpPublishVersion || in_array($version, static::$stableVersions, true)) {
+                    $phpPublishVersion = $version;
+                }
             }
         }
 
-        // No matches were found, use the latest version that travis supports ...
+        // No matches were found, use the latest stable version that travis supports ...
         if (0 === count($filteredVersions)) {
-            return array_slice($availableVersions, -1);
+            $latestStable = static::$stableVersions[count(static::$stableVersions) - 1];
+
+            return array(array($latestStable), $latestStable);
         }
 
-        return $filteredVersions;
+        return array($filteredVersions, $phpPublishVersion);
     }
+
+    protected function allowFailureVersions(array $phpVersions)
+    {
+        $unstableVersions = array_merge(static::$unstableVersions, static::$alternateVersions);
+
+        $allowFailureVersions = array();
+        foreach ($phpVersions as $version) {
+            if (in_array($version, $unstableVersions, true)) {
+                $allowFailureVersions[] = $version;
+            }
+        }
+
+        return $allowFailureVersions;
+    }
+
+    /**
+     * Stable PHP versions supported by Travis.
+     */
+    private static $stableVersions = array('5.3', '5.4', '5.5');
+
+    /**
+     * Unstable PHP versions supported by Travis.
+     */
+    private static $unstableVersions = array('5.6');
+
+    /**
+     * Alternate PHP versions supported by Travis.
+     */
+    private static $alternateVersions = array('hhvm');
 
     private $fileSystem;
     private $fileFinder;
