@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1403483871">
-  <project timestamp="1403483871">
+<coverage generated="1409788859">
+  <project timestamp="1409788859">
     <package name="Icecave\Archer\Configuration">
       <file name="/home/travis/build/IcecaveStudios/archer/src/Configuration/ComposerConfigurationReader.php">
         <class name="ComposerConfigurationReader" namespace="Icecave\Archer\Configuration">
@@ -1387,11 +1387,124 @@
         <class name="ClassMapGenerator" namespace="Icecave\Archer\Support\Composer\Autoload">
           <metrics methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
         </class>
+        <line num="5" type="stmt" count="0"/>
+        <line num="6" type="stmt" count="0"/>
+        <line num="7" type="stmt" count="0"/>
+        <line num="8" type="stmt" count="0"/>
+        <line num="9" type="stmt" count="0"/>
+        <line num="10" type="stmt" count="0"/>
+        <line num="11" type="stmt" count="0"/>
+        <line num="12" type="stmt" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="19" type="stmt" count="0"/>
+        <line num="20" type="stmt" count="0"/>
         <line num="31" type="method" name="findClasses" crap="90" count="0"/>
         <line num="63" type="stmt" count="0"/>
         <line num="65" type="stmt" count="0"/>
         <line num="66" type="stmt" count="0"/>
-        <metrics loc="82" ncloc="46" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+        <metrics loc="82" ncloc="46" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="0" elements="15" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="Icecave\Archer\Support\Composer\Package\LinkConstraint">
+      <file name="/home/travis/build/IcecaveStudios/archer/src/Support/Composer/Package/LinkConstraint/EmptyConstraint.php">
+        <class name="EmptyConstraint" namespace="Icecave\Archer\Support\Composer\Package\LinkConstraint">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <line num="5" type="stmt" count="0"/>
+        <line num="6" type="stmt" count="0"/>
+        <line num="7" type="stmt" count="0"/>
+        <line num="8" type="stmt" count="0"/>
+        <line num="9" type="stmt" count="0"/>
+        <line num="10" type="stmt" count="0"/>
+        <line num="11" type="stmt" count="0"/>
+        <line num="17" type="stmt" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="19" type="stmt" count="0"/>
+        <metrics loc="48" ncloc="32" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="10" coveredelements="0"/>
+      </file>
+      <file name="/home/travis/build/IcecaveStudios/archer/src/Support/Composer/Package/LinkConstraint/MultiConstraint.php">
+        <class name="MultiConstraint" namespace="Icecave\Archer\Support\Composer\Package\LinkConstraint">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <line num="5" type="stmt" count="0"/>
+        <line num="6" type="stmt" count="0"/>
+        <line num="7" type="stmt" count="0"/>
+        <line num="8" type="stmt" count="0"/>
+        <line num="9" type="stmt" count="0"/>
+        <line num="10" type="stmt" count="0"/>
+        <line num="11" type="stmt" count="0"/>
+        <line num="17" type="stmt" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="19" type="stmt" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <metrics loc="84" ncloc="61" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="11" coveredelements="0"/>
+      </file>
+      <file name="/home/travis/build/IcecaveStudios/archer/src/Support/Composer/Package/LinkConstraint/SpecificConstraint.php">
+        <class name="SpecificConstraint" namespace="Icecave\Archer\Support\Composer\Package\LinkConstraint">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <line num="5" type="stmt" count="0"/>
+        <line num="6" type="stmt" count="0"/>
+        <line num="7" type="stmt" count="0"/>
+        <line num="8" type="stmt" count="0"/>
+        <line num="9" type="stmt" count="0"/>
+        <line num="10" type="stmt" count="0"/>
+        <line num="11" type="stmt" count="0"/>
+        <line num="17" type="stmt" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="19" type="stmt" count="0"/>
+        <metrics loc="55" ncloc="31" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="10" coveredelements="0"/>
+      </file>
+      <file name="/home/travis/build/IcecaveStudios/archer/src/Support/Composer/Package/LinkConstraint/VersionConstraint.php">
+        <class name="VersionConstraint" namespace="Icecave\Archer\Support\Composer\Package\LinkConstraint">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <line num="5" type="stmt" count="0"/>
+        <line num="6" type="stmt" count="0"/>
+        <line num="7" type="stmt" count="0"/>
+        <line num="8" type="stmt" count="0"/>
+        <line num="9" type="stmt" count="0"/>
+        <line num="10" type="stmt" count="0"/>
+        <line num="11" type="stmt" count="0"/>
+        <line num="17" type="stmt" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="19" type="stmt" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="58" type="stmt" count="0"/>
+        <line num="59" type="stmt" count="0"/>
+        <metrics loc="101" ncloc="61" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="0" elements="14" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="Icecave\Archer\Support\Composer\Package\Version">
+      <file name="/home/travis/build/IcecaveStudios/archer/src/Support/Composer/Package/Version/VersionParser.php">
+        <class name="VersionParser" namespace="Icecave\Archer\Support\Composer\Package\Version">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <line num="5" type="stmt" count="0"/>
+        <line num="6" type="stmt" count="0"/>
+        <line num="7" type="stmt" count="0"/>
+        <line num="8" type="stmt" count="0"/>
+        <line num="9" type="stmt" count="0"/>
+        <line num="10" type="stmt" count="0"/>
+        <line num="11" type="stmt" count="0"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="22" type="stmt" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="85" type="stmt" count="0"/>
+        <line num="86" type="stmt" count="0"/>
+        <line num="87" type="stmt" count="0"/>
+        <line num="88" type="stmt" count="0"/>
+        <line num="89" type="stmt" count="0"/>
+        <line num="158" type="stmt" count="0"/>
+        <line num="159" type="stmt" count="0"/>
+        <line num="160" type="stmt" count="0"/>
+        <line num="161" type="stmt" count="0"/>
+        <line num="184" type="stmt" count="0"/>
+        <line num="185" type="stmt" count="0"/>
+        <line num="186" type="stmt" count="0"/>
+        <line num="187" type="stmt" count="0"/>
+        <metrics loc="352" ncloc="295" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="0" elements="23" coveredelements="0"/>
       </file>
     </package>
     <package name="Icecave\Archer\Support\Liftoff\Exception">
@@ -1646,6 +1759,6 @@
         <metrics loc="339" ncloc="242" classes="1" methods="16" coveredmethods="15" conditionals="0" coveredconditionals="0" statements="115" coveredstatements="114" elements="131" coveredelements="129"/>
       </file>
     </package>
-    <metrics files="32" loc="3646" ncloc="2844" classes="32" methods="182" coveredmethods="177" conditionals="0" coveredconditionals="0" statements="1235" coveredstatements="1211" elements="1417" coveredelements="1388"/>
+    <metrics files="37" loc="4286" ncloc="3324" classes="37" methods="182" coveredmethods="177" conditionals="0" coveredconditionals="0" statements="1314" coveredstatements="1211" elements="1496" coveredelements="1388"/>
   </project>
 </coverage>
