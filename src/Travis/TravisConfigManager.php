@@ -319,12 +319,12 @@ class TravisConfigManager
     /**
      * Stable PHP versions supported by Travis.
      */
-    private static $stableVersions = array('5.3', '5.4', '5.5');
+    private static $stableVersions = array('5.3', '5.4', '5.5', '5.6');
 
     /**
      * Unstable PHP versions supported by Travis.
      */
-    private static $unstableVersions = array('5.6');
+    private static $unstableVersions = array();
 
     /**
      * Alternate PHP versions supported by Travis.
