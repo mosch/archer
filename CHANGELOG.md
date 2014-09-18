@@ -1,5 +1,12 @@
 # Archer Changelog
 
+### 1.3.0 (2014-09-18)
+
+* **[NEW]** Added support for HHVM nightly to Travis CI configuration generator
+* **[NEW]** The `vendor/bin` directory now takes precedence in the PATH, allowing custom PHPUnit versions
+* **[IMPROVED]** PHP 5.6 is no longer an allowed failure in Travis configurations
+* **[IMPROVED]** Better support for projects replicated with Dropbox
+
 ### 1.2.0 (2014-06-23)
 
 * **[FIXED]** Files named `xxxInterface.php` are explictly excluded from coverage reports

@@ -3,11 +3,15 @@
 $packageRoot = dirname(__DIR__);
 
 $matches = array();
-if (preg_match('{^(.*)/vendor/.+/.+$}', $packageRoot, $matches)) {
-    require $matches[1] . '/vendor/autoload.php';
+if (preg_match('{^(.*)/vendor/?[^/]*/?[^/]*$}', $packageRoot, $matches)) {
+    $vendorPath = $matches[1] . '/vendor';
 } else {
-    require $packageRoot . '/vendor/autoload.php';
+    $vendorPath = $packageRoot . '/vendor';
 }
+
+require $vendorPath . '/autoload.php';
+
+putenv(sprintf('PATH=%s/bin:%s', $vendorPath, getenv('PATH')));
 
 Icecave\Archer\Support\Asplode::instance()->install();
 

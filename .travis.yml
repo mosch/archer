@@ -1,14 +1,14 @@
 language: php
 
-php: ["5.3", "5.4", "5.5", "5.6", "hhvm"]
+php: ["5.3", "5.4", "5.5", "5.6", "hhvm", "hhvm-nightly"]
 
 matrix:
-    allow_failures: [{"php": "5.6"}, {"php": "hhvm"}]
+    allow_failures: [{"php": "hhvm"}, {"php": "hhvm-nightly"}]
     fast_finish: true
 
     # Include another build in the matrix for dogfooding Archer!
     include:
-        - php: 5.5
+        - php: 5.6
           env:
             - secure: "PBoNnK73ID8FUCR6nreUdqnBIyH1h9NjB9eVVSFllc1+WRAGAFBNMVNo4f/4x9Da84SbfBwpw7Z7l7Rtgo69kPcSzgnhtE7WeqHZ5lzdxW+0dgBnFA48KVz5BZ7clvMSeqDI06v96hbTBWcs6KNvemg5ZRegG6U7R4AmSWUmQlI="
 
