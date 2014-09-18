@@ -329,7 +329,7 @@ class TravisConfigManager
     /**
      * Alternate PHP versions supported by Travis.
      */
-    private static $alternateVersions = array('hhvm');
+    private static $alternateVersions = array('hhvm', 'hhvm-nightly');
 
     private $fileSystem;
     private $fileFinder;

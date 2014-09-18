@@ -188,7 +188,7 @@ class TravisConfigManagerTest extends PHPUnit_Framework_TestCase
             $templateRead,
             Phake::verify($this->fileSystem)->write(
                 '/path/to/project/.travis.yml',
-                '<travis: ["5.3", "5.4", "5.5", "5.6", "hhvm"], 5.6, <matrix: [{"php": "hhvm"}]>, >'
+                '<travis: ["5.3", "5.4", "5.5", "5.6", "hhvm", "hhvm-nightly"], 5.6, <matrix: [{"php": "hhvm"}, {"php": "hhvm-nightly"}]>, >'
             )
         );
         $this->assertFalse($result);
@@ -218,7 +218,7 @@ class TravisConfigManagerTest extends PHPUnit_Framework_TestCase
             $templateRead,
             Phake::verify($this->fileSystem)->write(
                 '/path/to/project/.travis.yml',
-                '<travis: ["5.3", "5.4", "5.5", "5.6", "hhvm"], 5.6, <matrix: [{"php": "hhvm"}]>, - secure: "<env data>">'
+                '<travis: ["5.3", "5.4", "5.5", "5.6", "hhvm", "hhvm-nightly"], 5.6, <matrix: [{"php": "hhvm"}, {"php": "hhvm-nightly"}]>, - secure: "<env data>">'
             )
         );
         $this->assertTrue($result);
@@ -235,7 +235,7 @@ class TravisConfigManagerTest extends PHPUnit_Framework_TestCase
         Phake::verify($this->composerConfigReader)->read('/path/to/project');
         Phake::verify($this->fileSystem)->write(
             '/path/to/project/.travis.yml',
-            '<travis: ["5.4", "5.5", "5.6", "hhvm"], 5.6, <matrix: [{"php": "hhvm"}]>, >'
+            '<travis: ["5.4", "5.5", "5.6", "hhvm", "hhvm-nightly"], 5.6, <matrix: [{"php": "hhvm"}, {"php": "hhvm-nightly"}]>, >'
         );
     }
 
@@ -254,7 +254,7 @@ class TravisConfigManagerTest extends PHPUnit_Framework_TestCase
         Phake::verify($this->composerConfigReader)->read('/path/to/project');
         Phake::verify($this->fileSystem)->write(
             '/path/to/project/.travis.yml',
-            '<travis: ["5.3", "5.4", "5.5", "5.6", "hhvm"], 5.6, <matrix: [{"php": "hhvm"}]>, >'
+            '<travis: ["5.3", "5.4", "5.5", "5.6", "hhvm", "hhvm-nightly"], 5.6, <matrix: [{"php": "hhvm"}, {"php": "hhvm-nightly"}]>, >'
         );
     }
 
@@ -269,7 +269,7 @@ class TravisConfigManagerTest extends PHPUnit_Framework_TestCase
         Phake::verify($this->composerConfigReader)->read('/path/to/project');
         Phake::verify($this->fileSystem)->write(
             '/path/to/project/.travis.yml',
-            '<travis: ["5.6", "hhvm"], 5.6, <matrix: [{"php": "hhvm"}]>, >'
+            '<travis: ["5.6", "hhvm", "hhvm-nightly"], 5.6, <matrix: [{"php": "hhvm"}, {"php": "hhvm-nightly"}]>, >'
         );
     }
 
@@ -284,7 +284,7 @@ class TravisConfigManagerTest extends PHPUnit_Framework_TestCase
         Phake::verify($this->composerConfigReader)->read('/path/to/project');
         Phake::verify($this->fileSystem)->write(
             '/path/to/project/.travis.yml',
-            '<travis: ["5.3", "5.4", "5.5", "5.6", "hhvm"], 5.6, <matrix: [{"php": "hhvm"}]>, >'
+            '<travis: ["5.3", "5.4", "5.5", "5.6", "hhvm", "hhvm-nightly"], 5.6, <matrix: [{"php": "hhvm"}, {"php": "hhvm-nightly"}]>, >'
         );
     }
 
