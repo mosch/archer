@@ -26,6 +26,7 @@
     },
     "require-dev": {
         "eloquent/liberator": "~1",
+        "phpunit/phpunit": "~4",
         "symfony/event-dispatcher": "~2.1"
     },
     "suggest": {
