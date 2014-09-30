@@ -36,7 +36,7 @@ class GitDotFilesManagerTest extends PHPUnit_Framework_TestCase
 
     public function testConstructorDefaults()
     {
-        $this->manager = new GitDotFilesManager;
+        $this->manager = new GitDotFilesManager();
 
         $this->assertInstanceOf(
             'Icecave\Archer\FileSystem\FileSystem',

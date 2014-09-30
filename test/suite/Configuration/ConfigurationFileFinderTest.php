@@ -21,7 +21,7 @@ class ConfigurationFileFinderTest extends PHPUnit_Framework_TestCase
 
     public function testConstructorDefaults()
     {
-        $this->finder = new ConfigurationFileFinder;
+        $this->finder = new ConfigurationFileFinder();
 
         $this->assertInstanceOf(
             'Icecave\Archer\FileSystem\FileSystem',

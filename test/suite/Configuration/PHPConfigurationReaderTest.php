@@ -25,7 +25,7 @@ class PHPConfigurationReaderTest extends PHPUnit_Framework_TestCase
 
     public function testConstructorDefaults()
     {
-        $this->reader = new PHPConfigurationReader;
+        $this->reader = new PHPConfigurationReader();
 
         $this->assertInstanceOf(
             'Icecave\Archer\FileSystem\FileSystem',

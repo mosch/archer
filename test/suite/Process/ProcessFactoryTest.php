@@ -10,7 +10,7 @@ class ProcessFactoryTest extends PHPUnit_Framework_TestCase
     {
         parent::setUp();
 
-        $this->factory = new ProcessFactory;
+        $this->factory = new ProcessFactory();
     }
 
     public function testFactory()

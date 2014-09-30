@@ -11,7 +11,7 @@ class ConfigurationFileFinder
     public function __construct(FileSystem $fileSystem = null)
     {
         if (null === $fileSystem) {
-            $fileSystem = new FileSystem;
+            $fileSystem = new FileSystem();
         }
 
         $this->fileSystem = $fileSystem;

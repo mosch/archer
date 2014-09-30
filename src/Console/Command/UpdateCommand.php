@@ -32,19 +32,19 @@ class UpdateCommand extends Command
         ProcessFactory $processFactory = null
     ) {
         if (null === $dotFilesManager) {
-            $dotFilesManager = new GitDotFilesManager;
+            $dotFilesManager = new GitDotFilesManager();
         }
         if (null === $configReaderFactory) {
-            $configReaderFactory = new GitConfigReaderFactory;
+            $configReaderFactory = new GitConfigReaderFactory();
         }
         if (null === $travisClient) {
-            $travisClient = new TravisClient;
+            $travisClient = new TravisClient();
         }
         if (null === $travisConfigManager) {
-            $travisConfigManager = new TravisConfigManager;
+            $travisConfigManager = new TravisConfigManager();
         }
         if (null === $processFactory) {
-            $processFactory = new ProcessFactory;
+            $processFactory = new ProcessFactory();
         }
 
         $this->dotFilesManager = $dotFilesManager;

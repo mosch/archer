@@ -37,7 +37,7 @@ class CoverageCommand extends AbstractPHPUnitCommand
         $commandName = null
     ) {
         if (null === $launcher) {
-            $launcher = new Launcher;
+            $launcher = new Launcher();
         }
 
         $this->launcher = $launcher;

@@ -27,8 +27,8 @@ class TravisConfigManagerTest extends PHPUnit_Framework_TestCase
 
         Phake::when($this->fileFinder)->find(Phake::anyParameters())->thenReturn('/real/path/to/template');
 
-        $this->composerConfig = new stdClass;
-        $this->composerConfig->require = new stdClass;
+        $this->composerConfig = new stdClass();
+        $this->composerConfig->require = new stdClass();
         $this->composerConfig->require->php = '>=5.3';
 
         Phake::when($this->composerConfigReader)->read(Phake::anyParameters())->thenReturn($this->composerConfig);
@@ -43,11 +43,11 @@ class TravisConfigManagerTest extends PHPUnit_Framework_TestCase
 
     public function testConstructorDefaults()
     {
-        $this->manager = new TravisConfigManager;
+        $this->manager = new TravisConfigManager();
 
-        $this->assertEquals(new FileSystem, $this->manager->fileSystem());
-        $this->assertEquals(new ConfigurationFileFinder, $this->manager->fileFinder());
-        $this->assertEquals(new ComposerConfigurationReader, $this->manager->composerConfigReader());
+        $this->assertEquals(new FileSystem(), $this->manager->fileSystem());
+        $this->assertEquals(new ConfigurationFileFinder(), $this->manager->fileFinder());
+        $this->assertEquals(new ComposerConfigurationReader(), $this->manager->composerConfigReader());
     }
 
     public function testPublicKeyCache()

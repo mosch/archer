@@ -22,7 +22,7 @@ class ComposerConfigurationReaderTest extends PHPUnit_Framework_TestCase
 
     public function testConstructorDefaults()
     {
-        $this->reader = new ComposerConfigurationReader;
+        $this->reader = new ComposerConfigurationReader();
 
         $this->assertInstanceOf(
             'Icecave\Archer\FileSystem\FileSystem',
@@ -37,7 +37,7 @@ class ComposerConfigurationReaderTest extends PHPUnit_Framework_TestCase
             ->thenReturn('{"foo": "bar"}')
         ;
         $actual = $this->reader->read('baz');
-        $expected = new stdClass;
+        $expected = new stdClass();
         $expected->foo = 'bar';
 
         $this->assertEquals($expected, $actual);

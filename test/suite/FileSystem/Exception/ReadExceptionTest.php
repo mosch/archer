@@ -8,7 +8,7 @@ class ReadExceptionTest extends PHPUnit_Framework_TestCase
 {
     public function testException()
     {
-        $previous = new Exception;
+        $previous = new Exception();
         $exception = new ReadException('foo', $previous);
 
         $this->assertSame("Unable to read from 'foo'.", $exception->getMessage());

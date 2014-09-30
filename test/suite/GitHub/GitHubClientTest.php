@@ -34,7 +34,7 @@ class GitHubClientTest extends PHPUnit_Framework_TestCase
 
     public function testDefaultBranch()
     {
-        $response = new stdClass;
+        $response = new stdClass();
         $response->default_branch = 'branch-name';
         $response->master_branch = 'not-branch-name';
 
@@ -49,7 +49,7 @@ class GitHubClientTest extends PHPUnit_Framework_TestCase
 
     public function testDefaultBranchUsingMasterBranch()
     {
-        $response = new stdClass;
+        $response = new stdClass();
         $response->master_branch = 'branch-name';
 
         Phake::when($this->client)
@@ -65,7 +65,7 @@ class GitHubClientTest extends PHPUnit_Framework_TestCase
     {
         Phake::when($this->client)
             ->apiGet(Phake::anyParameters())
-            ->thenReturn(new stdClass);
+            ->thenReturn(new stdClass());
 
         $this->assertSame('master', $this->client->defaultBranch('bar', 'baz'));
 
@@ -108,7 +108,7 @@ class GitHubClientTest extends PHPUnit_Framework_TestCase
 
         $response = $this->client->apiGet('foo/%s', 'bar');
 
-        $expected = new stdClass;
+        $expected = new stdClass();
         $expected->result = true;
 
         $this->assertEquals($expected, $response);
@@ -130,7 +130,7 @@ class GitHubClientTest extends PHPUnit_Framework_TestCase
 
         $response = $this->client->apiGet('foo/%s', 'bar');
 
-        $expected = new stdClass;
+        $expected = new stdClass();
         $expected->result = true;
 
         $this->assertEquals($expected, $response);
@@ -159,7 +159,7 @@ class GitHubClientTest extends PHPUnit_Framework_TestCase
 
         $response = $this->client->apiGet('foo/%s', 'bar');
 
-        $expected = new stdClass;
+        $expected = new stdClass();
         $expected->result = true;
 
         $this->assertEquals($expected, $response);

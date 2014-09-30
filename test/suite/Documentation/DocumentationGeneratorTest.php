@@ -62,7 +62,7 @@ class DocumentationGeneratorTest extends PHPUnit_Framework_TestCase
 
     public function testConstructorDefaults()
     {
-        $this->generator = new DocumentationGenerator;
+        $this->generator = new DocumentationGenerator();
 
         $this->assertInstanceOf(
             'Icecave\Archer\FileSystem\FileSystem',
@@ -267,7 +267,7 @@ class DocumentationGeneratorTest extends PHPUnit_Framework_TestCase
         $generator = Liberator::liberate($this->generator);
 
         $this->setExpectedException('RuntimeException');
-        $generator->projectName(new stdClass);
+        $generator->projectName(new stdClass());
     }
 
     public function testCreateFinder()

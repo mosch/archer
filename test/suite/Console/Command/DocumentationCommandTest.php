@@ -37,7 +37,7 @@ class DocumentationCommandTest extends PHPUnit_Framework_TestCase
 
     public function testConstructorDefaults()
     {
-        $this->command = new DocumentationCommand;
+        $this->command = new DocumentationCommand();
 
         $this->assertInstanceOf(
             'Icecave\Archer\Documentation\DocumentationGenerator',
@@ -51,7 +51,7 @@ class DocumentationCommandTest extends PHPUnit_Framework_TestCase
 
     public function testConfigure()
     {
-        $expectedDefinition = new InputDefinition;
+        $expectedDefinition = new InputDefinition();
         $expectedDefinition->addOption(
             new InputOption(
                 'open',

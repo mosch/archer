@@ -39,7 +39,7 @@ class HiddenInputHelperTest extends PHPUnit_Framework_TestCase
 
     public function testConstructorDefaults()
     {
-        $this->helper = new HiddenInputHelper;
+        $this->helper = new HiddenInputHelper();
         $expectedHiddenInputPath = __DIR__ . '/../../../../res/bin/hiddeninput.exe';
 
         $this->assertTrue(file_exists($expectedHiddenInputPath));

@@ -17,7 +17,7 @@ class Asplode
      */
     public static function instance()
     {
-        return new static;
+        return new static();
     }
 
     public function __construct(Isolator $isolator = null)

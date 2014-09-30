@@ -12,7 +12,7 @@ class IsolatorTest extends PHPUnit_Framework_TestCase
 
     public function testGet()
     {
-        $isolator = new Isolator;
+        $isolator = new Isolator();
         $this->assertSame($isolator, Isolator::get($isolator));
 
         $singleton = Isolator::get(null);
@@ -30,26 +30,26 @@ class IsolatorTest extends PHPUnit_Framework_TestCase
 
     public function testCall()
     {
-        $isolator = new Isolator;
+        $isolator = new Isolator();
         $this->assertSame(3, $isolator->strlen('foo'));
     }
 
     public function testEcho()
     {
-        $isolator = new Isolator;
+        $isolator = new Isolator();
         $this->expectOutputString('Echo works!');
         $isolator->echo('Echo works!');
     }
 
     public function testEval()
     {
-        $isolator = new Isolator;
+        $isolator = new Isolator();
         $this->assertSame(3, $isolator->eval('return strlen("foo");'));
     }
 
     public function testInclude()
     {
-        $isolator = new Isolator;
+        $isolator = new Isolator();
         $this->assertFalse(class_exists(__NAMESPACE__ . '\TestFixture\ClassA', false));
 
         $isolator->include(__DIR__ . '/../../src/Support/TestFixture/ClassA.php');
@@ -58,7 +58,7 @@ class IsolatorTest extends PHPUnit_Framework_TestCase
 
     public function testIncludeOnce()
     {
-        $isolator = new Isolator;
+        $isolator = new Isolator();
         $this->assertFalse(class_exists(__NAMESPACE__ . '\TestFixture\ClassB', false));
 
         $isolator->include_once(__DIR__ . '/../../src/Support/TestFixture/ClassB.php');
@@ -67,7 +67,7 @@ class IsolatorTest extends PHPUnit_Framework_TestCase
 
     public function testRequire()
     {
-        $isolator = new Isolator;
+        $isolator = new Isolator();
         $this->assertFalse(class_exists(__NAMESPACE__ . '\TestFixture\ClassC', false));
 
         $isolator->require(__DIR__ . '/../../src/Support/TestFixture/ClassC.php');
@@ -76,7 +76,7 @@ class IsolatorTest extends PHPUnit_Framework_TestCase
 
     public function testRequireOnce()
     {
-        $isolator = new Isolator;
+        $isolator = new Isolator();
         $this->assertFalse(class_exists(__NAMESPACE__ . '\TestFixture\ClassD', false));
 
         $isolator->require_once(__DIR__ . '/../../src/Support/TestFixture/ClassD.php');

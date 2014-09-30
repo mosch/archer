@@ -69,7 +69,7 @@ class BuildCommandTest extends PHPUnit_Framework_TestCase
 
     public function testConstructorDefaults()
     {
-        $this->command = new BuildCommand;
+        $this->command = new BuildCommand();
 
         $this->assertInstanceOf(
             'Icecave\Archer\GitHub\GitHubClient',

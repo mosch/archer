@@ -21,15 +21,15 @@ class BuildCommand extends AbstractTravisCommand
         Isolator $isolator = null
     ) {
         if (null === $githubClient) {
-            $githubClient = new GitHubClient;
+            $githubClient = new GitHubClient();
         }
 
         if (null === $coverallsClient) {
-            $coverallsClient = new CoverallsClient;
+            $coverallsClient = new CoverallsClient();
         }
 
         if (null === $fileSystem) {
-            $fileSystem = new FileSystem;
+            $fileSystem = new FileSystem();
         }
 
         $this->githubClient = $githubClient;
