@@ -256,6 +256,13 @@ publishes a similar badge image when [Coveralls] is not enabled.
 [Test Coverage]: http://img.shields.io/coveralls/IcecaveStudios/archer/develop.svg?style=flat-square
 [SemVer]: http://img.shields.io/:semver-1.3.0-brightgreen.svg?style=flat-square
 
+## Contact us
+
+* Follow [@IcecaveStudios](https://twitter.com/IcecaveStudios) on Twitter
+* Visit the [Icecave Studios website](http://icecave.com.au)
+* Join `#icecave` on [irc.freenode.net](http://webchat.freenode.net?channels=icecave)
+
+<!-- references -->
 [composer]: http://getcomposer.org/
 [convention-over-configuration]: http://en.wikipedia.org/wiki/Convention_over_configuration
 [coveralls]: https://coveralls.io/
