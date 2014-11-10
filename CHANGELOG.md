@@ -1,5 +1,9 @@
 # Archer Changelog
 
+### 1.3.1 (2014-11-11)
+
+* **[IMPROVED]** Increased timeout for small tests to 2 seconds
+
 ### 1.3.0 (2014-09-18)
 
 * **[NEW]** Added support for HHVM nightly to Travis CI configuration generator
