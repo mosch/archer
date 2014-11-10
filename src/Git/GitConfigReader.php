@@ -15,7 +15,7 @@ class GitConfigReader
         ProcessFactory $processFactory = null
     ) {
         if (null === $processFactory) {
-            $processFactory = new ProcessFactory;
+            $processFactory = new ProcessFactory();
         }
 
         $this->repositoryPath = $repositoryPath;

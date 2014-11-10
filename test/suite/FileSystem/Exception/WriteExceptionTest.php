@@ -8,7 +8,7 @@ class WriteExceptionTest extends PHPUnit_Framework_TestCase
 {
     public function testException()
     {
-        $previous = new Exception;
+        $previous = new Exception();
         $exception = new WriteException('foo', $previous);
 
         $this->assertSame("Unable to write to 'foo'.", $exception->getMessage());

@@ -205,7 +205,7 @@ class CoverageCommandTest extends PHPUnit_Framework_TestCase
 
     public function testConfigure()
     {
-        $expectedInputDefinition = new InputDefinition;
+        $expectedInputDefinition = new InputDefinition();
         $expectedInputDefinition->addArgument(
             new InputArgument(
                 'argument',

@@ -16,7 +16,7 @@ class TravisClient
         Isolator $isolator = null
     ) {
         if (null === $fileSystem) {
-            $fileSystem = new FileSystem;
+            $fileSystem = new FileSystem();
         }
 
         $this->fileSystem = $fileSystem;

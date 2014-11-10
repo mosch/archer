@@ -18,7 +18,7 @@ class LaunchExceptionTest extends PHPUnit_Framework_TestCase
 {
     public function testException()
     {
-        $previous = new Exception;
+        $previous = new Exception();
         $exception = new LaunchException('/path/to/file', $previous);
 
         $this->assertSame(

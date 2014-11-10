@@ -24,19 +24,19 @@ class Application extends SymfonyApplication
         parent::__construct(PackageInfo::NAME, PackageInfo::VERSION);
 
         if (null === $fileSystem) {
-            $fileSystem = new FileSystem;
+            $fileSystem = new FileSystem();
         }
 
         $this->packageRoot = $packageRoot;
         $this->fileSystem = $fileSystem;
         $this->isolator = Isolator::get($isolator);
 
-        $this->getHelperSet()->set(new Helper\HiddenInputHelper);
+        $this->getHelperSet()->set(new Helper\HiddenInputHelper());
 
-        $this->add(new Command\CoverageCommand);
-        $this->add(new Command\DocumentationCommand);
-        $this->add(new Command\TestCommand);
-        $this->add(new Command\UpdateCommand);
+        $this->add(new Command\CoverageCommand());
+        $this->add(new Command\DocumentationCommand());
+        $this->add(new Command\TestCommand());
+        $this->add(new Command\UpdateCommand());
 
         $this->add(new Command\Internal\UpdateBinariesCommand($fileSystem));
 

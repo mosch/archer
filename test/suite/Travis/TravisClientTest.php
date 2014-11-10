@@ -25,7 +25,7 @@ class TravisClientTest extends PHPUnit_Framework_TestCase
 
     public function testConstructorDefaults()
     {
-        $this->client = new TravisClient;
+        $this->client = new TravisClient();
 
         $this->assertInstanceOf(
             'Icecave\Archer\FileSystem\FileSystem',

@@ -15,10 +15,10 @@ class DocumentationCommand extends Command
         Launcher $launcher = null
     ) {
         if (null === $generator) {
-            $generator = new DocumentationGenerator;
+            $generator = new DocumentationGenerator();
         }
         if (null === $launcher) {
-            $launcher = new Launcher;
+            $launcher = new Launcher();
         }
 
         $this->generator = $generator;

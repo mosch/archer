@@ -15,10 +15,10 @@ class PHPUnitExecutableFinder
         ProcessFactory $processFactory = null
     ) {
         if (null === $executableFinder) {
-            $executableFinder = new ExecutableFinder;
+            $executableFinder = new ExecutableFinder();
         }
         if (null === $processFactory) {
-            $processFactory = new ProcessFactory;
+            $processFactory = new ProcessFactory();
         }
 
         $this->executableFinder = $executableFinder;

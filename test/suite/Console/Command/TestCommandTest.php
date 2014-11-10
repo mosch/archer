@@ -144,7 +144,7 @@ class TestCommandTest extends PHPUnit_Framework_TestCase
 
     public function testConfigure()
     {
-        $expectedInputDefinition = new InputDefinition;
+        $expectedInputDefinition = new InputDefinition();
         $expectedInputDefinition->addArgument(new InputArgument(
             'argument',
             InputArgument::OPTIONAL | InputArgument::IS_ARRAY,

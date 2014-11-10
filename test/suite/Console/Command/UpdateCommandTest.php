@@ -106,7 +106,7 @@ class UpdateCommandTest extends PHPUnit_Framework_TestCase
 
     public function testConstructorDefaults()
     {
-        $this->command = new UpdateCommand;
+        $this->command = new UpdateCommand();
 
         $this->assertInstanceOf(
             'Icecave\Archer\Git\GitDotFilesManager',

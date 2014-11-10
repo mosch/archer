@@ -9,14 +9,14 @@ namespace Icecave\Archer\Support;
  */
 class Isolator
 {
-    public static function get(Isolator $instance = NULL)
+    public static function get(Isolator $instance = null)
     {
         if ($instance) {
             return $instance;
         } elseif (self::$instance) {
             return self::$instance;
         } else {
-            return self::$instance = new self;
+            return self::$instance = new self();
         }
     }
 

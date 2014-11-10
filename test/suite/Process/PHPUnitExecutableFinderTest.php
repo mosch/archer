@@ -35,7 +35,7 @@ class PHPUnitExecutableFinderTest extends PHPUnit_Framework_TestCase
 
     public function testConstructorDefaults()
     {
-        $this->finder = new PHPUnitExecutableFinder;
+        $this->finder = new PHPUnitExecutableFinder();
 
         $this->assertInstanceOf(
             'Symfony\Component\Process\ExecutableFinder',

@@ -34,22 +34,22 @@ abstract class AbstractPHPUnitCommand extends Command
         $commandName = null
     ) {
         if (null === $fileSystem) {
-            $fileSystem = new FileSystem;
+            $fileSystem = new FileSystem();
         }
         if (null === $phpFinder) {
-            $phpFinder = new PhpExecutableFinder;
+            $phpFinder = new PhpExecutableFinder();
         }
         if (null === $phpunitFinder) {
-            $phpunitFinder = new PHPUnitExecutableFinder;
+            $phpunitFinder = new PHPUnitExecutableFinder();
         }
         if (null === $phpConfigurationReader) {
-            $phpConfigurationReader = new PHPConfigurationReader;
+            $phpConfigurationReader = new PHPConfigurationReader();
         }
         if (null === $configurationFileFinder) {
-            $configurationFileFinder = new ConfigurationFileFinder;
+            $configurationFileFinder = new ConfigurationFileFinder();
         }
         if (null === $processFactory) {
-            $processFactory = new ProcessFactory;
+            $processFactory = new ProcessFactory();
         }
 
         $this->fileSystem = $fileSystem;

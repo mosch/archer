@@ -23,19 +23,19 @@ class TravisConfigManager
         Isolator $isolator = null
     ) {
         if (null === $fileSystem) {
-            $fileSystem = new FileSystem;
+            $fileSystem = new FileSystem();
         }
         if (null === $fileFinder) {
-            $fileFinder = new ConfigurationFileFinder;
+            $fileFinder = new ConfigurationFileFinder();
         }
         if (null === $composerConfigReader) {
-            $composerConfigReader = new ComposerConfigurationReader;
+            $composerConfigReader = new ComposerConfigurationReader();
         }
 
         $this->fileSystem = $fileSystem;
         $this->fileFinder = $fileFinder;
         $this->composerConfigReader = $composerConfigReader;
-        $this->versionParser = new VersionParser;
+        $this->versionParser = new VersionParser();
         $this->isolator = Isolator::get($isolator);
     }
 

@@ -242,7 +242,7 @@ class VersionParser
         }
 
         if (preg_match('{^[x*](\.[x*])*$}i', $constraint)) {
-            return array(new EmptyConstraint);
+            return array(new EmptyConstraint());
         }
 
         if (preg_match('{^~(\d+)(?:\.(\d+))?(?:\.(\d+))?(?:\.(\d+))?'.self::$modifierRegex.'?$}i', $constraint, $matches)) {
