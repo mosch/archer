@@ -254,7 +254,7 @@ publishes a similar badge image when [Coveralls] is not enabled.
 <!-- references -->
 [Build Status]: http://img.shields.io/travis/IcecaveStudios/archer/develop.svg?style=flat-square
 [Test Coverage]: http://img.shields.io/coveralls/IcecaveStudios/archer/develop.svg?style=flat-square
-[SemVer]: http://img.shields.io/:semver-1.3.1-brightgreen.svg?style=flat-square
+[SemVer]: http://img.shields.io/:semver-1.3.2-brightgreen.svg?style=flat-square
 
 ## Contact us
 

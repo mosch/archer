@@ -1,5 +1,9 @@
 # Archer Changelog
 
+### 1.3.2 (2015-03-26)
+
+* **[IMPROVED]** Upgrade to Sami version 3
+
 ### 1.3.1 (2014-11-11)
 
 * **[IMPROVED]** Increased timeout for small tests to 2 seconds
