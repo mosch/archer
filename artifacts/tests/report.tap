@@ -184,12 +184,12 @@ ok 182 - Icecave\Archer\Support\IsolatorTest::testIncludeOnce
 ok 183 - Icecave\Archer\Support\IsolatorTest::testRequire
 ok 184 - Icecave\Archer\Support\IsolatorTest::testRequireOnce
 ok 185 - Icecave\Archer\Support\Liftoff\Exception\LaunchExceptionTest::testException
-ok 186 - Icecave\Archer\Support\Liftoff\LauncherTest::testLaunch with data set "OSX" ('Darwin', '/path/to/file', NULL, 'open \'/path/to/file\'')
-ok 187 - Icecave\Archer\Support\Liftoff\LauncherTest::testLaunch with data set "OSX with arguments" ('Darwin', '/path/to/file', array('--foo', 'bar'), 'open \'/path/to/file\' \'--args\' \'--foo\' \'bar\'')
-ok 188 - Icecave\Archer\Support\Liftoff\LauncherTest::testLaunch with data set "Windows" ('Windows NT', '/path/to/file', NULL, 'start \'liftoff\' \'/path/to/file\'')
-ok 189 - Icecave\Archer\Support\Liftoff\LauncherTest::testLaunch with data set "Windows with arguments" ('Windows NT', '/path/to/file', array('--foo', 'bar'), 'start \'liftoff\' \'/path/to/file\' \'--foo\' \'bar\'')
-ok 190 - Icecave\Archer\Support\Liftoff\LauncherTest::testLaunch with data set "Unix" ('Linux', '/path/to/file', NULL, 'xdg-open \'/path/to/file\'')
-ok 191 - Icecave\Archer\Support\Liftoff\LauncherTest::testLaunch with data set "Unix with arguments" ('Linux', '/path/to/file', array('--foo', 'bar'), 'xdg-open \'/path/to/file\' \'--foo\' \'bar\'')
+ok 186 - Icecave\Archer\Support\Liftoff\LauncherTest::testLaunch with data set "OSX" ('Darwin', '/path/to/file', null, 'open '/path/to/file'')
+ok 187 - Icecave\Archer\Support\Liftoff\LauncherTest::testLaunch with data set "OSX with arguments" ('Darwin', '/path/to/file', array('--foo', 'bar'), 'open '/path/to/file' '--args'... 'bar'')
+ok 188 - Icecave\Archer\Support\Liftoff\LauncherTest::testLaunch with data set "Windows" ('Windows NT', '/path/to/file', null, 'start 'liftoff' '/path/to/file'')
+ok 189 - Icecave\Archer\Support\Liftoff\LauncherTest::testLaunch with data set "Windows with arguments" ('Windows NT', '/path/to/file', array('--foo', 'bar'), 'start 'liftoff' '/path/to/fil... 'bar'')
+ok 190 - Icecave\Archer\Support\Liftoff\LauncherTest::testLaunch with data set "Unix" ('Linux', '/path/to/file', null, 'xdg-open '/path/to/file'')
+ok 191 - Icecave\Archer\Support\Liftoff\LauncherTest::testLaunch with data set "Unix with arguments" ('Linux', '/path/to/file', array('--foo', 'bar'), 'xdg-open '/path/to/file' '--foo' 'bar'')
 ok 192 - Icecave\Archer\Support\Liftoff\LauncherTest::testLaunchFailure
 ok 193 - Icecave\Archer\Travis\TravisClientTest::testConstructor
 ok 194 - Icecave\Archer\Travis\TravisClientTest::testConstructorDefaults

@@ -1,134 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="robots" content="index, follow, all" />
-        <title>Icecave\Archer\Support\Composer\Package\LinkConstraint\VersionConstraint | icecave/archer API</title>
-                    <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css">
-                            </head>
-        <body id="class">
-            <div class="header">
-        <ul>
-            <li><a href="../../../../../../classes.html">Classes</a></li>
-                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
-                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
-            <li><a href="../../../../../../doc-index.html">Index</a></li>
-            
-        </ul>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Icecave\Archer\Support\Composer\Package\LinkConstraint\VersionConstraint | icecave/archer API</title>
 
-        <div id="title">icecave/archer API</div>
+            <link rel="stylesheet" type="text/css" href="../../../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../../css/sami.css">
+        <script src="../../../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../../../js/typeahead.min.js"></script>
+        <script src="../../../../../../sami.js"></script>
+    
+    
+    </head>
 
-            <div class="type">Class</div>
-    <h1><a href="../../../../../../Icecave/Archer/Support/Composer/Package/LinkConstraint.html">Icecave\Archer\Support\Composer\Package\LinkConstraint</a>\VersionConstraint</h1>
+    <body id="class" data-name="class:Icecave_Archer_Support_Composer_Package_LinkConstraint_VersionConstraint" data-root-path="../../../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
     </div>
-        <div class="content">
-                <p>class    <strong>VersionConstraint</strong>        extends <a href="../../../../../../Icecave/Archer/Support/Composer/Package/LinkConstraint/SpecificConstraint.html"><abbr title="Icecave\Archer\Support\Composer\Package\LinkConstraint\SpecificConstraint">SpecificConstraint</abbr></a></p>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../../../index.html">icecave/archer API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../../../Icecave.html">Icecave</a></li>
+                                        <li><a href="../../../../../../Icecave/Archer.html">Archer</a></li>
+                                        <li><a href="../../../../../../Icecave/Archer/Support.html">Support</a></li>
+                                        <li><a href="../../../../../../Icecave/Archer/Support/Composer.html">Composer</a></li>
+                                        <li><a href="../../../../../../Icecave/Archer/Support/Composer/Package.html">Package</a></li>
+                                        <li><a href="../../../../../../Icecave/Archer/Support/Composer/Package/LinkConstraint.html">LinkConstraint</a></li>
+    
+                <li>VersionConstraint</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>VersionConstraint</h1>
+    </div>
+
+    <p>    class
+    <strong>VersionConstraint</strong>        extends <a href="../../../../../../Icecave/Archer/Support/Composer/Package/LinkConstraint/SpecificConstraint.html"><abbr title="Icecave\Archer\Support\Composer\Package\LinkConstraint\SpecificConstraint">SpecificConstraint</abbr></a></p>
 
             <div class="description">
-            <p>Constrains a package link based on package version</p>
-            <p>Version numbers must be compatible with version_compare</p>
-        </div>
+            <p>Constrains a package link based on package version</p>            <p>Version numbers must be compatible with version_compare</p>        </div>
+    
     
     
     
             <h2>Methods</h2>
 
-            <table>
-                    <tr>
-                <td class="type">
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_matches">matches</a>(<a href="../../../../../../Icecave/Archer/Support/Composer/Package/LinkConstraint/LinkConstraintInterface.html"><abbr title="Icecave\Archer\Support\Composer\Package\LinkConstraint\LinkConstraintInterface">LinkConstraintInterface</abbr></a> $provider)
-                    <p>
-</p>
-                </td>
-                <td><small>from&nbsp;<a href="../../../../../../Icecave/Archer/Support/Composer/Package/LinkConstraint/SpecificConstraint.html#method_matches"><abbr title="Icecave\Archer\Support\Composer\Package\LinkConstraint\SpecificConstraint">SpecificConstraint</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Icecave/Archer/Support/Composer/Package/LinkConstraint/SpecificConstraint.html#method_matches"><abbr title="Icecave\Archer\Support\Composer\Package\LinkConstraint\SpecificConstraint">SpecificConstraint</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_setPrettyString">setPrettyString</a>($prettyString)
-                    <p>
-</p>
-                </td>
-                <td><small>from&nbsp;<a href="../../../../../../Icecave/Archer/Support/Composer/Package/LinkConstraint/SpecificConstraint.html#method_setPrettyString"><abbr title="Icecave\Archer\Support\Composer\Package\LinkConstraint\SpecificConstraint">SpecificConstraint</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Icecave/Archer/Support/Composer/Package/LinkConstraint/SpecificConstraint.html#method_setPrettyString"><abbr title="Icecave\Archer\Support\Composer\Package\LinkConstraint\SpecificConstraint">SpecificConstraint</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getPrettyString">getPrettyString</a>()
-                    <p>
-</p>
-                </td>
-                <td><small>from&nbsp;<a href="../../../../../../Icecave/Archer/Support/Composer/Package/LinkConstraint/SpecificConstraint.html#method_getPrettyString"><abbr title="Icecave\Archer\Support\Composer\Package\LinkConstraint\SpecificConstraint">SpecificConstraint</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Icecave/Archer/Support/Composer/Package/LinkConstraint/SpecificConstraint.html#method_getPrettyString"><abbr title="Icecave\Archer\Support\Composer\Package\LinkConstraint\SpecificConstraint">SpecificConstraint</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method___construct">__construct</a>(string $operator, string $version)
-                    <p>Sets operator and version to compare a package with</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Sets operator and version to compare a package with</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_versionCompare">versionCompare</a>($a, $b, $operator)
-                    <p>
-</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_matchSpecific">matchSpecific</a>(<a href="../../../../../../Icecave/Archer/Support/Composer/Package/LinkConstraint/VersionConstraint.html"><abbr title="Icecave\Archer\Support\Composer\Package\LinkConstraint\VersionConstraint">VersionConstraint</abbr></a> $provider)
-                    <p>
-</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method___toString">__toString</a>()
-                    <p>
-</p>
-                </td>
-                <td></td>
-            </tr>
-            </table>
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
 
 
         <h2>Details</h2>
 
-                        <h3 id="method_matches">
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_matches">
         <div class="location">in <a href="../../../../../../Icecave/Archer/Support/Composer/Package/LinkConstraint/SpecificConstraint.html#method_matches"><abbr title="Icecave\Archer\Support\Composer\Package\LinkConstraint\SpecificConstraint">SpecificConstraint</abbr></a> at line 25</div>
-        <code>            public            
+        <code>                    
     <strong>matches</strong>(<a href="../../../../../../Icecave/Archer/Support/Composer/Package/LinkConstraint/LinkConstraintInterface.html"><abbr title="Icecave\Archer\Support\Composer\Package\LinkConstraint\LinkConstraintInterface">LinkConstraintInterface</abbr></a> $provider)</code>
     </h3>
     <div class="details">
-        <p>
-</p>
-        <p>
-</p>
-        <div class="tags">
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td><a href="../../../../../../Icecave/Archer/Support/Composer/Package/LinkConstraint/LinkConstraintInterface.html"><abbr title="Icecave\Archer\Support\Composer\Package\LinkConstraint\LinkConstraintInterface">LinkConstraintInterface</abbr></a></td>
                 <td>$provider</td>
@@ -143,20 +188,18 @@
                     </div>
     </div>
 
-                <h3 id="method_setPrettyString">
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPrettyString">
         <div class="location">in <a href="../../../../../../Icecave/Archer/Support/Composer/Package/LinkConstraint/SpecificConstraint.html#method_setPrettyString"><abbr title="Icecave\Archer\Support\Composer\Package\LinkConstraint\SpecificConstraint">SpecificConstraint</abbr></a> at line 37</div>
-        <code>            public            
+        <code>                    
     <strong>setPrettyString</strong>($prettyString)</code>
     </h3>
     <div class="details">
-        <p>
-</p>
-        <p>
-</p>
-        <div class="tags">
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td></td>
                 <td>$prettyString</td>
@@ -171,36 +214,35 @@
                     </div>
     </div>
 
-                <h3 id="method_getPrettyString">
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPrettyString">
         <div class="location">in <a href="../../../../../../Icecave/Archer/Support/Composer/Package/LinkConstraint/SpecificConstraint.html#method_getPrettyString"><abbr title="Icecave\Archer\Support\Composer\Package\LinkConstraint\SpecificConstraint">SpecificConstraint</abbr></a> at line 42</div>
-        <code>            public            
+        <code>                    
     <strong>getPrettyString</strong>()</code>
     </h3>
     <div class="details">
-        <p>
-</p>
-        <p>
-</p>
-        <div class="tags">
+                <div class="tags">
             
             
             
                     </div>
     </div>
 
-                <h3 id="method___construct">
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
         <div class="location">at line 34</div>
-        <code>            public            
+        <code>                    
     <strong>__construct</strong>(string $operator, string $version)</code>
     </h3>
     <div class="details">
-        <p>Sets operator and version to compare a package with</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Sets operator and version to compare a package with</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$operator</td>
@@ -219,20 +261,18 @@
                     </div>
     </div>
 
-                <h3 id="method_versionCompare">
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_versionCompare">
         <div class="location">at line 48</div>
-        <code>            public            
+        <code>                    
     <strong>versionCompare</strong>($a, $b, $operator)</code>
     </h3>
     <div class="details">
-        <p>
-</p>
-        <p>
-</p>
-        <div class="tags">
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td></td>
                 <td>$a</td>
@@ -259,20 +299,18 @@
                     </div>
     </div>
 
-                <h3 id="method_matchSpecific">
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_matchSpecific">
         <div class="location">at line 61</div>
-        <code>            public            
+        <code>                    
     <strong>matchSpecific</strong>(<a href="../../../../../../Icecave/Archer/Support/Composer/Package/LinkConstraint/VersionConstraint.html"><abbr title="Icecave\Archer\Support\Composer\Package\LinkConstraint\VersionConstraint">VersionConstraint</abbr></a> $provider)</code>
     </h3>
     <div class="details">
-        <p>
-</p>
-        <p>
-</p>
-        <div class="tags">
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td><a href="../../../../../../Icecave/Archer/Support/Composer/Package/LinkConstraint/VersionConstraint.html"><abbr title="Icecave\Archer\Support\Composer\Package\LinkConstraint\VersionConstraint">VersionConstraint</abbr></a></td>
                 <td>$provider</td>
@@ -287,27 +325,32 @@
                     </div>
     </div>
 
-                <h3 id="method___toString">
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___toString">
         <div class="location">at line 97</div>
-        <code>            public            
+        <code>                    
     <strong>__toString</strong>()</code>
     </h3>
     <div class="details">
-        <p>
-</p>
-        <p>
-</p>
-        <div class="tags">
+                <div class="tags">
             
             
             
                     </div>
     </div>
 
+            </div>
+            </div>
+
     
             </div>
-            <div id="footer">
-        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
     </div>
     </body>
+
 </html>
